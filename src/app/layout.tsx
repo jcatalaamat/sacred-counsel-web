@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import { Header, Footer, WhatsAppButton } from '@/components/layout';
+import { OrganizationSchema, LocalBusinessSchema } from '@/components/StructuredData';
 import './globals.css';
 
 const cormorant = Cormorant_Garamond({
@@ -73,6 +74,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
+      <head>
+        <OrganizationSchema />
+        <LocalBusinessSchema />
+      </head>
       <body className="antialiased">
         <Header />
         <main>{children}</main>

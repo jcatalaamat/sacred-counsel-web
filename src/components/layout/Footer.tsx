@@ -33,6 +33,8 @@ export function Footer() {
         { label: 'Apply Now', href: '/apply' },
         { label: 'Contact', href: '/about#contact' },
         { label: 'FAQ', href: '/ayahuasca#faq' },
+        { label: 'Privacy Policy', href: '/privacy' },
+        { label: 'Terms of Service', href: '/terms' },
       ],
     },
   ];
