@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/Hero';
 import { DetoxTimeline } from '@/components/sections/ItineraryTimeline';
 import { DetoxPricing } from '@/components/sections/PricingSection';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: '21-Day Metabolic Detox | Sacred Counsel',
     description:
       'Reset your metabolism and prepare your body for plant medicine with our comprehensive 21-day program.',
-    images: ['/images/detox/hero.jpg'],
+    images: ['/images/detox/detox-stock-fruits.jpg'],
   },
 };
 
@@ -24,7 +25,7 @@ export default function DetoxPage() {
     <>
       {/* Hero */}
       <PageHero
-        backgroundImage="/images/detox/hero.jpg"
+        backgroundImage="/images/detox/detox-stock-fruits.jpg"
         title="21-Day Metabolic Detox"
         subtitle="Reset & Restore"
         description="A comprehensive program combining functional medicine, Ayurvedic wisdom, and practical lifestyle changes to reset your metabolism and prepare your body for transformation."
@@ -65,17 +66,14 @@ export default function DetoxPage() {
               </div>
             </div>
 
-            {/* Luke Image Placeholder */}
+            {/* Luke Photo */}
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[var(--color-sand)]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-earth)] to-[var(--color-earth-dark)] flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center text-4xl font-medium">
-                    L
-                  </div>
-                  <p className="text-xl font-medium">{TEAM.luke.name}</p>
-                  <p className="text-white/80">{TEAM.luke.credentials}</p>
-                </div>
-              </div>
+              <Image
+                src="/images/team/team-luke.jpg"
+                alt={TEAM.luke.name}
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

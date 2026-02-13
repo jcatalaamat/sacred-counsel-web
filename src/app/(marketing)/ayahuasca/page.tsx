@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/Hero';
 import { AyahuascaItinerary } from '@/components/sections/ItineraryTimeline';
 import { PhotoGallery } from '@/components/sections/PhotoGallery';
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     title: 'Ayahuasca Retreats | Sacred Counsel',
     description:
       'Transformative 5-day ayahuasca retreat in the mountains of Mexico. Small groups, experienced facilitators, deep integration.',
-    images: ['/images/venue/ceremony-room.jpg'],
+    images: ['/images/venue/aya-venue-05.jpg'],
   },
 };
 
@@ -30,35 +31,35 @@ const ayahuascaTestimonials = TESTIMONIALS.filter(
 // Venue gallery images
 const venuePhotos = [
   {
-    src: '/images/venue/main-view.jpg',
+    src: '/images/venue/aya-venue-06.jpg',
     alt: 'Retreat venue overlooking Valle de Bravo',
   },
   {
-    src: '/images/venue/ceremony-room.jpg',
+    src: '/images/venue/aya-venue-05.jpg',
     alt: 'Sacred ceremony space',
   },
   {
-    src: '/images/venue/pool-area.jpg',
+    src: '/images/venue/aya-venue-09.jpg',
     alt: 'Pool and relaxation area',
   },
   {
-    src: '/images/venue/dining.jpg',
+    src: '/images/venue/aya-venue-25.jpg',
     alt: 'Organic dining experience',
   },
   {
-    src: '/images/venue/garden.jpg',
+    src: '/images/venue/aya-venue-03.jpg',
     alt: 'Peaceful gardens',
   },
   {
-    src: '/images/venue/bedroom.jpg',
+    src: '/images/venue/aya-venue-11.jpg',
     alt: 'Comfortable accommodations',
   },
   {
-    src: '/images/venue/meditation.jpg',
+    src: '/images/venue/aya-venue-04.png',
     alt: 'Meditation space',
   },
   {
-    src: '/images/venue/sunset.jpg',
+    src: '/images/venue/aya-venue-14.jpg',
     alt: 'Sunset over the mountains',
   },
 ];
@@ -68,7 +69,7 @@ export default function AyahuascaPage() {
     <>
       {/* Hero */}
       <PageHero
-        backgroundImage="/images/venue/ceremony-room.jpg"
+        backgroundImage="/images/venue/aya-venue-05.jpg"
         title="Ayahuasca Retreats"
         subtitle="Plant Medicine Ceremonies"
         description="A 5-day, 2-ceremony experience with world-class facilitation at an exquisite venue in Mexico's Central Highlands."
@@ -135,7 +136,7 @@ export default function AyahuascaPage() {
                 loop
                 playsInline
                 className="w-full h-full object-cover"
-                poster="/images/venue/ceremony-room.jpg"
+                poster="/images/venue/aya-venue-05.jpg"
               >
                 <source src="/videos/ayahuasca-video.mp4" type="video/mp4" />
               </video>
@@ -190,10 +191,13 @@ export default function AyahuascaPage() {
             {/* Alexa */}
             <div className="bg-[var(--color-sand)] rounded-2xl p-8">
               <div className="flex items-start gap-6">
-                <div className="w-24 h-24 rounded-full bg-[var(--color-sage-light)] overflow-hidden flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-to-br from-[var(--color-sage)] to-[var(--color-forest)] flex items-center justify-center text-white text-2xl font-medium">
-                    A
-                  </div>
+                <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/images/team/team-alexa.jpg"
+                    alt="Alexa Iya Soro"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-[var(--color-charcoal)]">
@@ -211,10 +215,13 @@ export default function AyahuascaPage() {
             {/* Luke */}
             <div className="bg-[var(--color-sand)] rounded-2xl p-8">
               <div className="flex items-start gap-6">
-                <div className="w-24 h-24 rounded-full bg-[var(--color-sage-light)] overflow-hidden flex-shrink-0">
-                  <div className="w-full h-full bg-gradient-to-br from-[var(--color-earth)] to-[var(--color-earth-dark)] flex items-center justify-center text-white text-2xl font-medium">
-                    L
-                  </div>
+                <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
+                  <Image
+                    src="/images/team/team-luke.jpg"
+                    alt="Luke DeStefano"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="text-xl font-medium text-[var(--color-charcoal)]">

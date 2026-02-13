@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/Hero';
 import { PhotoGallery } from '@/components/sections/PhotoGallery';
 import { AmenityGrid, OfferingsList } from '@/components/sections/AmenityGrid';
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: 'Private Homestay Retreats | Sacred Counsel',
     description:
       'Personalized retreats at our private homestead. Custom plant medicine ceremonies, therapy, and wellness programs.',
-    images: ['/images/homestay/main.jpg'],
+    images: ['/images/homestay/homestay-02.png'],
   },
 };
 
@@ -28,44 +29,44 @@ const homestayTestimonials = TESTIMONIALS.filter(
 // Homestay gallery images
 const homestayPhotos = [
   {
-    src: '/images/homestay/main.jpg',
+    src: '/images/homestay/homestay-02.png',
     alt: 'La Fuente main house',
   },
   {
-    src: '/images/homestay/jacuzzi.jpg',
+    src: '/images/homestay/homestay-13.png',
     alt: 'Spring-fed jacuzzi',
   },
   {
-    src: '/images/homestay/sauna.jpg',
+    src: '/images/homestay/homestay-08.jpg',
     alt: 'Turkish sauna',
   },
   {
-    src: '/images/homestay/ceremony.jpg',
+    src: '/images/homestay/homestay-05.jpg',
     alt: 'Private ceremony space',
   },
   {
-    src: '/images/homestay/garden.jpg',
+    src: '/images/homestay/homestay-03.jpg',
     alt: 'Lush gardens',
   },
   {
-    src: '/images/homestay/bedroom.jpg',
+    src: '/images/homestay/homestay-07.jpg',
     alt: 'Guest suite',
   },
   {
-    src: '/images/homestay/kitchen.jpg',
+    src: '/images/homestay/homestay-14.jpg',
     alt: 'Gourmet kitchen',
   },
   {
-    src: '/images/homestay/view.jpg',
+    src: '/images/homestay/homestay-10.jpg',
     alt: 'Mountain views',
   },
   {
-    src: '/images/homestay/studio.jpg',
+    src: '/images/homestay/homestay-11.jpg',
     alt: 'Recording studio',
   },
   {
-    src: '/images/homestay/art.jpg',
-    alt: 'Art workshop space',
+    src: '/images/homestay/homestay-01.jpg',
+    alt: 'Healing session',
   },
 ];
 
@@ -74,7 +75,7 @@ export default function HomestayPage() {
     <>
       {/* Hero */}
       <PageHero
-        backgroundImage="/images/homestay/main.jpg"
+        backgroundImage="/images/homestay/homestay-02.png"
         title="Private Homestay Retreats"
         subtitle="Your Personal Sanctuary"
         description="Fully personalized retreats for 1-2 guests at La Fuente, our private homestead in Valle de Bravo. Custom programming, private ceremonies, and world-class amenities."
@@ -112,11 +113,21 @@ export default function HomestayPage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--color-sand)]">
-                <div className="w-full h-full bg-gradient-to-br from-[var(--color-sage-light)] to-[var(--color-sage)]" />
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--color-sand)]">
+                <Image
+                  src="/images/homestay/homestay-04.jpg"
+                  alt="La Fuente sacred space"
+                  fill
+                  className="object-cover"
+                />
               </div>
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--color-sand)] mt-8">
-                <div className="w-full h-full bg-gradient-to-br from-[var(--color-earth)] to-[var(--color-earth-dark)]" />
+              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-[var(--color-sand)] mt-8">
+                <Image
+                  src="/images/homestay/homestay-06.jpg"
+                  alt="Ice bath experience"
+                  fill
+                  className="object-cover"
+                />
               </div>
             </div>
           </div>

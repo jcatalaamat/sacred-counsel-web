@@ -116,7 +116,7 @@ export function RetreatCTA({ className }: { className?: string }) {
       primaryCTA={{ label: 'Apply for April 21-25', href: '/apply?service=ayahuasca' }}
       secondaryCTA={{ label: 'View Full Itinerary', href: '/ayahuasca#itinerary' }}
       variant="image"
-      backgroundImage="/images/venue/ceremony-room.jpg"
+      backgroundImage="/images/venue/aya-venue-05.jpg"
       className={className}
     />
   );

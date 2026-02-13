@@ -44,7 +44,7 @@ const placeholderPosts = [
     slug: { current: 'understanding-the-dieta' },
     excerpt:
       'Learn about the traditional dietary and lifestyle practices that support deep plant medicine work.',
-    featuredImage: '/images/detox/detox-hero.jpg',
+    featuredImage: '/images/detox/detox-stock-fruits.jpg',
     publishedAt: '2024-11-10',
     categories: ['preparation', 'wellness'],
     author: { name: 'Luke DeStefano' },
@@ -55,7 +55,7 @@ const placeholderPosts = [
     slug: { current: 'nervous-system-regulation' },
     excerpt:
       'Practical techniques for regulating your nervous system before, during, and after ceremony.',
-    featuredImage: '/images/integration/integration-hero.jpg',
+    featuredImage: '/images/integration/integration-session-bg.jpg',
     publishedAt: '2024-10-25',
     categories: ['wellness', 'mental-health'],
     author: { name: 'Alexa Iya Soro' },
@@ -89,7 +89,7 @@ export default function BlogPage() {
         title="Blog"
         subtitle="Insights & Guidance"
         description="Articles on preparation, integration, and the transformative journey of plant medicine work."
-        backgroundImage="/images/venue/meditation.jpg"
+        backgroundImage="/images/venue/aya-venue-04.png"
       />
 
       <section className="section bg-white">

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       'Transformative ayahuasca retreats, private homestays, psychedelic integration therapy, and holistic wellness in Valle de Bravo, Mexico.',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/venue/aya-hero.png',
         width: 1200,
         height: 630,
         alt: 'Sacred Counsel - Ayahuasca Retreats in Mexico',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Sacred Counsel | Integrative Psychedelic Support',
     description:
       'Transformative ayahuasca retreats, private homestays, and psychedelic integration therapy in Valle de Bravo, Mexico.',
-    images: ['/images/og-image.jpg'],
+    images: ['/images/venue/aya-hero.png'],
   },
   robots: {
     index: true,

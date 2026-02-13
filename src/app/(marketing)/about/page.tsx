@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/Hero';
 import { ApplyCTA } from '@/components/sections/CTASection';
 import { TEAM } from '@/lib/constants';
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
     title: 'About Sacred Counsel',
     description:
       'Meet Alexa and Luke, the founders of Sacred Counsel. Years of training, deep experience, and a commitment to your transformation.',
-    images: ['/images/team/together.jpg'],
+    images: ['/images/team/team-the-flock.jpg'],
   },
 };
 
@@ -20,7 +21,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <PageHero
-        backgroundImage="/images/team/together.jpg"
+        backgroundImage="/images/team/team-the-flock.jpg"
         title="About Sacred Counsel"
         subtitle="Our Story"
         description="Two paths, one calling. We came together through a shared commitment to supporting others on their journey of healing and awakening."
@@ -72,14 +73,12 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             {/* Photo */}
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[var(--color-sage-light)]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-sage)] to-[var(--color-forest)] flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center text-5xl font-medium">
-                    A
-                  </div>
-                  <p className="text-sm text-white/80">Photo placeholder</p>
-                </div>
-              </div>
+              <Image
+                src="/images/team/team-alexa.jpg"
+                alt="Alexa Iya Soro"
+                fill
+                className="object-cover"
+              />
             </div>
 
             {/* Bio */}
@@ -197,14 +196,12 @@ export default function AboutPage() {
 
             {/* Photo - Right on desktop */}
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[var(--color-earth)] lg:order-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-earth)] to-[var(--color-earth-dark)] flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center text-5xl font-medium">
-                    L
-                  </div>
-                  <p className="text-sm text-white/80">Photo placeholder</p>
-                </div>
-              </div>
+              <Image
+                src="/images/team/team-luke.jpg"
+                alt="Luke DeStefano"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -287,10 +284,13 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="aspect-video rounded-2xl overflow-hidden bg-[var(--color-sand)]">
-              <div className="w-full h-full bg-gradient-to-br from-[var(--color-sage-light)] to-[var(--color-forest)] flex items-center justify-center text-white">
-                <p className="text-lg font-medium">Map / Location Photo</p>
-              </div>
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-[var(--color-sand)]">
+              <Image
+                src="/images/home/home-desert-landscape.jpg"
+                alt="Valle de Bravo, Mexico"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

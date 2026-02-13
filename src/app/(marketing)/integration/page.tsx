@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { PageHero } from '@/components/sections/Hero';
 import { IntegrationPricing } from '@/components/sections/PricingSection';
 import { FAQSection } from '@/components/sections/FAQSection';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
     title: 'Psychedelic Integration Therapy | Sacred Counsel',
     description:
       'Licensed psychotherapist specializing in psychedelic integration. Transform your experiences into lasting change.',
-    images: ['/images/integration/hero.jpg'],
+    images: ['/images/integration/integration-session-bg.jpg'],
   },
 };
 
@@ -29,7 +30,7 @@ export default function IntegrationPage() {
     <>
       {/* Hero */}
       <PageHero
-        backgroundImage="/images/integration/hero.jpg"
+        backgroundImage="/images/integration/integration-session-bg.jpg"
         title="Integration Therapy"
         subtitle="With Alexa Iya Soro, MA, LMHC"
         description="Embrace all that you are, all that you can become, and learn to live your most purposeful life."
@@ -41,19 +42,14 @@ export default function IntegrationPage() {
       <section id="about" className="section bg-white">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            {/* Image/Video placeholder */}
+            {/* Alexa Photo */}
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[var(--color-sand)]">
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--color-sage-light)] to-[var(--color-sage)] flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-white/20 flex items-center justify-center">
-                    <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <p className="text-lg font-medium">Video Introduction</p>
-                  <p className="text-sm text-white/80">Coming Soon</p>
-                </div>
-              </div>
+              <Image
+                src="/images/integration/integration-alexa-photo.jpg"
+                alt="Alexa Iya Soro - Integration Therapist"
+                fill
+                className="object-cover"
+              />
             </div>
 
             <div>
