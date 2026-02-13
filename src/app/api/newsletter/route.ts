@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'hello@sacredcounsel.space';
 
 export async function POST(request: NextRequest) {
   try {
@@ -20,18 +25,30 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // In production, you would:
-    // 1. Add to ConvertKit or your email provider
-    // 2. Possibly add to CRM
-    // 3. Send welcome email
+    // Send notification email
+    if (process.env.RESEND_API_KEY) {
+      await resend.emails.send({
+        from: 'Sacred Counsel <onboarding@resend.dev>',
+        to: [NOTIFICATION_EMAIL],
+        subject: `New Newsletter Signup: ${email}`,
+        html: `
+          <h2>New Newsletter Subscriber</h2>
+          <hr />
+          <ul>
+            <li><strong>Email:</strong> ${email}</li>
+            <li><strong>First Name:</strong> ${firstName || 'Not provided'}</li>
+          </ul>
+          <p><em>Signed up at ${new Date().toISOString()}</em></p>
+        `,
+      });
+    } else {
+      console.log('RESEND_API_KEY not set — newsletter signup logged only:', {
+        email,
+        firstName: firstName || 'Not provided',
+        timestamp: new Date().toISOString(),
+      });
+    }
 
-    console.log('Newsletter signup:', {
-      email,
-      firstName: firstName || 'Not provided',
-      timestamp: new Date().toISOString(),
-    });
-
-    // For now, just log and return success
     return NextResponse.json({
       success: true,
       message: 'Successfully subscribed to newsletter',
