@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'hello@sacredcounsel.space';
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || 'hello@sacred-counsel.com';
 
 export async function POST(request: NextRequest) {
   try {
